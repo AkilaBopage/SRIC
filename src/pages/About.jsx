@@ -1,113 +1,208 @@
+import { useNavigate } from "react-router-dom";
+
 export default function About() {
+  const navigate = useNavigate();
+
+  const timeline = [
+    {
+      year: "2015",
+      title: "Foundation",
+      desc: "SRIC Route Investments was established with a vision to transform infrastructure investment.",
+    },
+    {
+      year: "2018",
+      title: "Expansion",
+      desc: "Expanded into international transport and logistics partnerships.",
+    },
+    {
+      year: "2021",
+      title: "Renewable Focus",
+      desc: "Entered renewable energy and sustainable development projects.",
+    },
+    {
+      year: "2026",
+      title: "Global Growth",
+      desc: "Operating across multiple countries with strategic investment portfolios.",
+    },
+  ];
+
   return (
-    <div className="container py-5" style={{ marginTop: "70px" }}>
+    <>
+      {/* HERO (Different style from Home) */}
+      <section
+        className="text-white d-flex align-items-center"
+        style={{
+          marginTop: "70px",
+          minHeight: "80vh",
+          backgroundImage:
+            "linear-gradient(rgba(10,15,30,.75),rgba(10,15,30,.75)),url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=80')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="container text-center">
+          <h1 className="display-3 fw-bold">
+            Who We Are
+          </h1>
 
-      {/* HEADER */}
-      <div className="text-center mb-5">
-        <h1 className="fw-bold">About SRIC Route Investments</h1>
-        <p className="text-muted">
-          Building global transport, infrastructure, and investment solutions
-        </p>
-      </div>
-
-      {/* COMPANY INTRO */}
-      <div className="row align-items-center mb-5">
-
-        <div className="col-md-6">
-          <h3 className="fw-bold mb-3">Who We Are</h3>
-          <p className="text-secondary">
-            SRIC Route Investments is a forward-thinking company specializing in
-            transport infrastructure, commercial vehicle export solutions, and
-            international investment partnerships. We focus on building long-term
-            value across global markets.
+          <p className="lead mt-4 mx-auto" style={{ maxWidth: "800px" }}>
+            A strategic investment company focused on building long-term
+            value through infrastructure, transportation, energy,
+            and global partnerships.
           </p>
         </div>
+      </section>
 
-        <div className="col-md-6">
-          <div className="bg-light rounded shadow-sm p-5 text-center">
-            <h5 className="fw-bold">Global Presence</h5>
-            <p className="text-muted mb-0">
-              Asia • Europe • Middle East • Africa
-            </p>
-          </div>
-        </div>
+      {/* STORY SECTION */}
+      <section className="py-5">
+        <div className="container">
+          <div className="row align-items-center g-5">
 
-      </div>
+            <div className="col-lg-6">
+              <img
+                src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80"
+                className="img-fluid rounded-4 shadow"
+                alt=""
+              />
+            </div>
 
-      {/* VISION & MISSION CARDS */}
-      <div className="row g-4 mb-5">
+            <div className="col-lg-6">
 
-        <div className="col-md-6">
-          <div className="card shadow-sm h-100 border-0">
-            <div className="card-body">
-              <h4 className="fw-bold text-primary">Our Vision</h4>
-              <p className="text-secondary mt-2">
-                To become a global leader in smart transport systems, sustainable mobility,
-                and large-scale infrastructure development.
+              <span className="text-primary fw-bold">
+                OUR STORY
+              </span>
+
+              <h2 className="fw-bold display-5 mt-2">
+                Building Trust Through Investment Excellence
+              </h2>
+
+              <p className="text-muted mt-4">
+                SRIC Route Investments began with a mission to connect
+                capital with opportunity. Over the years, we have expanded
+                into multiple sectors including infrastructure, logistics,
+                renewable energy, and international trade.
               </p>
-            </div>
-          </div>
-        </div>
 
-        <div className="col-md-6">
-          <div className="card shadow-sm h-100 border-0">
-            <div className="card-body">
-              <h4 className="fw-bold text-primary">Our Mission</h4>
-              <p className="text-secondary mt-2">
-                To connect countries through reliable transport solutions, advanced engineering,
-                and high-quality commercial vehicles that support economic growth.
+              <p className="text-muted">
+                Today, we operate with a global mindset, helping investors
+                and partners create sustainable and profitable long-term
+                ventures.
               </p>
+
             </div>
+
           </div>
         </div>
+      </section>
 
-      </div>
+      {/* TIMELINE */}
+      <section className="bg-light py-5">
+        <div className="container">
 
-      {/* VALUES SECTION */}
-      <div className="mb-5">
-        <h3 className="fw-bold text-center mb-4">Our Core Values</h3>
+          <h2 className="text-center fw-bold mb-5">
+            Our Journey
+          </h2>
 
-        <div className="row text-center g-4">
+          <div className="row g-4">
 
-          <div className="col-md-4">
-            <div className="p-4 border rounded h-100">
-              <h5 className="fw-bold">Integrity</h5>
-              <p className="text-muted">Transparent and ethical business practices.</p>
-            </div>
-          </div>
+            {timeline.map((item, index) => (
+              <div className="col-md-6" key={index}>
 
-          <div className="col-md-4">
-            <div className="p-4 border rounded h-100">
-              <h5 className="fw-bold">Innovation</h5>
-              <p className="text-muted">Modern solutions for global transport challenges.</p>
-            </div>
-          </div>
+                <div className="p-4 bg-white shadow-sm rounded-4 h-100">
 
-          <div className="col-md-4">
-            <div className="p-4 border rounded h-100">
-              <h5 className="fw-bold">Sustainability</h5>
-              <p className="text-muted">Building eco-friendly and long-term systems.</p>
-            </div>
+                  <h1 className="text-primary fw-bold">
+                    {item.year}
+                  </h1>
+
+                  <h4>{item.title}</h4>
+
+                  <p className="text-muted mb-0">
+                    {item.desc}
+                  </p>
+
+                </div>
+
+              </div>
+            ))}
+
           </div>
 
         </div>
-      </div>
+      </section>
 
-      {/* CALL TO ACTION */}
-      <div className="text-center bg-dark text-white p-5 rounded">
-        <h3 className="fw-bold">Let’s Build the Future Together</h3>
-        <p className="text-light">
-          Partner with SRIC Route Investments for global opportunities.
-        </p>
+      {/* VISION / MISSION */}
+      <section className="py-5">
+        <div className="container">
 
-        <button
-          className="btn btn-primary mt-2"
-          onClick={() => alert("Thank you for your interest!")}
-        >
-          Contact Us
-        </button>
-      </div>
+          <div className="row g-4">
 
-    </div>
+            <div className="col-md-6">
+              <div className="p-5 bg-primary text-white rounded-4 h-100">
+                <h2>Our Vision</h2>
+                <p className="mt-3">
+                  To become a global leader in sustainable investment
+                  solutions across infrastructure, energy, and transport.
+                </p>
+              </div>
+            </div>
+
+            <div className="col-md-6">
+              <div className="p-5 bg-dark text-white rounded-4 h-100">
+                <h2>Our Mission</h2>
+                <p className="mt-3">
+                  To connect investors with high-impact opportunities
+                  that drive economic growth and long-term sustainability.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* GLOBAL PRESENCE */}
+      <section className="py-5">
+        <div className="container text-center">
+
+          <h2 className="fw-bold mb-4">
+            Global Presence
+          </h2>
+
+          <img
+            src="https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=2000&q=80"
+            className="img-fluid rounded-4 shadow"
+            alt=""
+          />
+
+          <p className="text-muted mt-4">
+            Operating across Asia, Europe, Middle East and emerging markets.
+          </p>
+
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-dark text-white py-5">
+        <div className="container text-center">
+
+          <h2 className="fw-bold">
+            Let’s Build Something Global
+          </h2>
+
+          <p className="lead mt-3">
+            Partner with SRIC Route Investments for sustainable growth and international expansion.
+          </p>
+
+          <button
+            className="btn btn-warning btn-lg mt-3 px-5"
+            onClick={() => navigate("/Contact")}
+          >
+            Contact Us
+          </button>
+
+        </div>
+      </section>
+    </>
   );
 }

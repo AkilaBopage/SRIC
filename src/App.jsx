@@ -6,28 +6,31 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
-
 import SriLankaProjects from "./pages/SriLankaProjects";
 import GlobalProjects from "./pages/GlobalProjects";
+
 export default function App() {
   return (
     <>
       <Navbar />
 
-      <Routes>
+      {/* FIXED CONTENT SPACING */}
+      <div style={{ paddingTop: "1px" }}>
+        <Routes>
 
-        <Route path="/SRIC" element={<Home />} />
-         <Route path="/Home" element={<Home />} />
-        <Route path="/" element={<Home />} />
-         <Route path="" element={<Home />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
-         <Route path="/about" element={<About />} />
-         <Route path="/sri-lanka-projects" element={<SriLankaProjects />} />
-         <Route path="/global-projects" element={<GlobalProjects />} />
-           <Route path="/projects" element={<Projects />} />
-       
-      </Routes>
+          {/* MAIN ROUTE (ONLY THIS IS NEEDED) */}
+          <Route path="/" element={<Home />} />
+<Route path="/home" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+
+          <Route path="/sri-lanka-projects" element={<SriLankaProjects />} />
+          <Route path="/global-projects" element={<GlobalProjects />} />
+          <Route path="/projects" element={<Projects />} />
+
+        </Routes>
+      </div>
     </>
   );
 }

@@ -5,15 +5,15 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
-      <div className="container">
+<nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+      <div className="container py-2">
 
         {/* BRAND */}
         <Link className="navbar-brand fw-bold" to="/">
           SRIC Investors
         </Link>
 
-        {/* HAMBURGER BUTTON */}
+        {/* TOGGLER */}
         <button
           className="navbar-toggler"
           type="button"
@@ -25,28 +25,28 @@ export default function Navbar() {
         {/* MENU */}
         <div className={`collapse navbar-collapse ${open ? "show" : ""}`}>
 
-          <ul className="navbar-nav ms-auto text-center text-lg-end">
+          <ul className="navbar-nav ms-auto text-center text-lg-end gap-2">
 
             <li className="nav-item">
-              <Link className="nav-link" to="/" onClick={() => setOpen(false)}>
+              <Link className="nav-link py-2" to="/" onClick={() => setOpen(false)}>
                 Home
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/services" onClick={() => setOpen(false)}>
+              <Link className="nav-link py-2" to="/services" onClick={() => setOpen(false)}>
                 Services
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/contact" onClick={() => setOpen(false)}>
+              <Link className="nav-link py-2" to="/contact" onClick={() => setOpen(false)}>
                 Contact
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/about" onClick={() => setOpen(false)}>
+              <Link className="nav-link py-2" to="/about" onClick={() => setOpen(false)}>
                 About
               </Link>
             </li>
