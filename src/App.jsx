@@ -14,21 +14,16 @@ export default function App() {
     <>
       <Navbar />
 
-      {/* FIXED CONTENT SPACING */}
-      <div style={{ paddingTop: "1px" }}>
+      <div>
         <Routes>
-
-          {/* MAIN ROUTE (ONLY THIS IS NEEDED) */}
           <Route path="/" element={<Home />} />
-<Route path="/home" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
-
+          <Route path="/projects" element={<Projects />} />
           <Route path="/sri-lanka-projects" element={<SriLankaProjects />} />
           <Route path="/global-projects" element={<GlobalProjects />} />
-          <Route path="/projects" element={<Projects />} />
-
         </Routes>
       </div>
     </>
