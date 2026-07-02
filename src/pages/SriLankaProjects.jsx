@@ -6,7 +6,7 @@ export default function SriLankaProjects() {
       <section
         className="text-white d-flex align-items-center"
         style={{
-          marginTop: "70px",
+           
           minHeight: "85vh",
           backgroundImage:
             "linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=80')",

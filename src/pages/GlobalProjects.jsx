@@ -6,7 +6,7 @@ export default function GlobalProjects() {
       <section
         className="text-white d-flex align-items-center"
         style={{
-          marginTop: "70px",
+           
           minHeight: "85vh",
           backgroundImage:
             "linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80')",

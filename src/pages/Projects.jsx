@@ -51,7 +51,7 @@ export default function Projects() {
       <section
         className="text-white d-flex align-items-center"
         style={{
-          marginTop: "70px",
+           
           minHeight: "80vh",
           backgroundImage:
             "linear-gradient(rgba(5,10,25,.78),rgba(5,10,25,.78)),url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2200&q=80')",

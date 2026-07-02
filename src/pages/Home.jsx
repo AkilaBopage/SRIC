@@ -46,7 +46,7 @@ export default function Home() {
       <section
         className="hero-home text-white"
         style={{
-          marginTop: "70px",
+           
           minHeight: "92vh",
           backgroundImage:
             "linear-gradient(rgba(8,20,43,.72),rgba(8,20,43,.72)),url('https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=2200&q=80')",

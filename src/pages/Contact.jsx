@@ -57,7 +57,7 @@ export default function Contact() {
       <section
         className="text-white d-flex align-items-center"
         style={{
-          marginTop: "70px",
+           
           minHeight: "50vh",
           backgroundImage:
             "linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=80')",

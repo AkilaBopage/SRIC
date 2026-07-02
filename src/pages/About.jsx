@@ -32,7 +32,7 @@ export default function About() {
       <section
         className="text-white d-flex align-items-center"
         style={{
-          marginTop: "70px",
+          
           minHeight: "80vh",
           backgroundImage:
             "linear-gradient(rgba(10,15,30,.75),rgba(10,15,30,.75)),url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=80')",

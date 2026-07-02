@@ -36,7 +36,7 @@ export default function Services() {
       <section
         className="text-white d-flex align-items-center"
         style={{
-          marginTop: "70px",
+           
           minHeight: "85vh",
           backgroundImage:
             "linear-gradient(rgba(10,15,35,.75),rgba(10,15,35,.75)),url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2000&q=80')",
